@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="Los del Último Cubata. Charanga de Alameda de la Sagra, Toledo. Música, fiesta y buen ambiente para todo tipo de eventos.">
+<title>Los del Último Cubata | Charanga oficial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--yellow:#ffd21a;--gold:#ffb900;--black:#070707;--panel:#111;--muted:#b8b8b8;--line:#2c2c2c}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--black);color:#fff;font-family:Montserrat,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{width:min(1160px,calc(100% - 42px));margin-inline:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.92);backdrop-filter:blur(16px);border-bottom:1px solid #242424}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;font-family:Anton,Impact,sans-serif;letter-spacing:.8px;font-size:19px}
+.brand img{width:45px;height:45px;object-fit:cover;border-radius:50%;border:1px solid #594700}
+.brand span{max-width:210px}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.7px}
+.navlinks a{color:#ddd;transition:.2s}.navlinks a:hover{color:var(--yellow)}
+.navlinks .nav-cta{padding:12px 15px;border-radius:4px;background:var(--yellow);color:#080808}
+.hero{position:relative;isolation:isolate;min-height:690px;display:flex;align-items:center;overflow:hidden;background:#050505}
+.hero-bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.82) 42%,rgba(0,0,0,.32) 100%),url('assets/cartel-charanga.jpg') center 31%/cover no-repeat;filter:saturate(.82)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#070707 0%,transparent 24%,transparent 78%,rgba(0,0,0,.4))}
+.hero-content{padding:75px 0 94px;max-width:720px}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--yellow);font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+.kicker:before{content:"";width:28px;height:2px;background:var(--yellow)}
+h1,h2,h3,p{margin-top:0}
+h1{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:clamp(54px,8vw,100px);line-height:.91;letter-spacing:.5px;margin:24px 0}
+h1 span{display:block;color:var(--yellow)}
+.hero p{max-width:570px;color:#ddd;line-height:1.85;font-size:15px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border:1px solid var(--yellow);border-radius:4px;background:var(--yellow);color:#080808;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-3px);background:transparent;color:var(--yellow)}
+.btn.secondary{border-color:#696969;background:rgba(0,0,0,.25);color:#fff}
+.btn.secondary:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero-proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:45px;color:#ddd;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.hero-proof span{display:flex;align-items:center;gap:8px}.hero-proof b{color:var(--yellow);font-size:17px}
+.marquee{background:var(--yellow);color:#070707;overflow:hidden;white-space:nowrap;font:20px Anton,Impact,sans-serif;letter-spacing:2px;padding:13px 0}
+.marquee span{padding:0 25px}
+section{padding:94px 0}
+.section-head{max-width:720px;margin-bottom:38px}
+.section-head.center{text-align:center;margin-inline:auto}
+.eyebrow{font-size:10px;letter-spacing:3px;font-weight:900;text-transform:uppercase;color:var(--yellow)}
+h2{font:clamp(39px,5vw,64px)/.98 Anton,Impact,sans-serif;text-transform:uppercase;margin:15px 0 18px;letter-spacing:.3px}
+h2 span{color:var(--yellow)}
+.lead{font-size:14px;line-height:1.9;color:#c6c6c6}
+.about-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center}
+.about-copy .lead{max-width:620px}
+.about-image{position:relative}
+.about-image img{width:100%;height:480px;object-fit:cover;object-position:center 30%;border-radius:8px;display:block;border:1px solid #333}
+.image-label{position:absolute;left:-18px;bottom:24px;background:var(--yellow);color:#080808;padding:17px 21px;border-radius:4px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px;box-shadow:0 12px 30px #0008}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.stat{border-left:2px solid var(--yellow);padding:5px 0 5px 13px}
+.stat strong{display:block;font:25px Anton,Impact,sans-serif;color:var(--yellow);text-transform:uppercase}
+.stat span{display:block;margin-top:4px;font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:.8px;font-weight:800}
+.events{background:#101010;border-block:1px solid #242424}
+.event-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.event-card{position:relative;min-height:220px;padding:26px 22px;border:1px solid #303030;border-radius:7px;background:linear-gradient(150deg,#181818,#090909);transition:transform .2s,border-color .2s;overflow:hidden}
+.event-card:hover{transform:translateY(-5px);border-color:#8a7100}
+.event-number{font:36px Anton,Impact,sans-serif;color:#4b410e}
+.event-icon{font-size:28px;margin:12px 0 18px}
+.event-card h3{font-size:13px;line-height:1.4;text-transform:uppercase;margin-bottom:10px}
+.event-card p{font-size:11px;line-height:1.7;color:#aaa;margin:0}
+.event-note{text-align:center;margin-top:30px;color:#ddd;font-size:13px;font-weight:700}.event-note strong{color:var(--yellow)}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+.gallery-item{margin:0;background:#101010;border:1px solid #292929;border-radius:8px;overflow:hidden}
+.gallery-item img{display:block;width:100%;height:auto;transition:transform .45s}
+.gallery-item:hover img{transform:scale(1.015)}
+.gallery-item figcaption{padding:15px 17px;color:#bcbcbc;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;border-top:1px solid #292929}
+.contact{background:radial-gradient(ellipse at 80% 20%,#2b2300 0%,#0a0a0a 60%);border-top:1px solid #2c2505}
+.contact-layout{display:grid;grid-template-columns:1fr .8fr;gap:45px;align-items:center}
+.contact-card{padding:30px;border:1px solid #514300;border-radius:8px;background:#090909}
+.phone{font:clamp(35px,5vw,55px) Anton,Impact,sans-serif;color:var(--yellow);letter-spacing:1px;margin:12px 0}
+.contact-card p{color:#aaa;font-size:12px;line-height:1.7}
+.social-list{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
+.social{display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border:1px solid #333;border-radius:5px;background:#111;font-size:12px;font-weight:800;transition:.2s}
+.social:hover{border-color:var(--yellow);color:var(--yellow)}
+.social span:last-child{color:var(--yellow);font-size:18px}
+.sponsors{background:#f7f6f0;color:#111}
+.sponsors .eyebrow{color:#8b6d00}
+.sponsors .lead{color:#5d5d5d}
+.sponsor-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:38px}
+.sponsor-card{min-height:150px;padding:13px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e2e0d8;border-radius:6px;transition:transform .2s,box-shadow .2s}
+.sponsor-card:hover{transform:translateY(-4px);box-shadow:0 12px 25px #0001}
+.sponsor-card img{width:100%;height:125px;object-fit:contain;display:block}
+footer{padding:28px 0;background:#050505;border-top:1px solid #242424;color:#777;font-size:10px;letter-spacing:.5px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer strong{color:var(--yellow)}
+.float-wa{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;display:grid;place-items:center;background:#20c767;border:2px solid white;border-radius:50%;color:white;font-size:27px;box-shadow:0 8px 25px #0008;transition:transform .2s}
+.float-wa:hover{transform:scale(1.08)}
+@media(max-width:850px){.navlinks{gap:13px}.navlinks a{font-size:9px}.about-grid,.contact-layout{grid-template-columns:1fr;gap:35px}.about-image{max-width:620px}.about-image img{height:auto;max-height:520px}.image-label{left:12px}.event-grid{grid-template-columns:repeat(2,1fr)}.sponsor-grid{grid-template-columns:repeat(3,1fr)}.hero{min-height:650px}.hero-bg{background-position:58% center}.hero-content{max-width:650px}}
+@media(max-width:560px){.container{width:min(100% - 30px,1160px)}.nav{height:66px}.brand{font-size:15px;gap:8px}.brand img{width:37px;height:37px}.brand span{max-width:140px}.navlinks{gap:10px}.navlinks a{font-size:8px}.navlinks a:nth-child(3){display:none}.navlinks .nav-cta{padding:10px}.hero{min-height:620px}.hero-bg{background-position:57% center;background-image:linear-gradient(90deg,rgba(0,0,0,.93),rgba(0,0,0,.62)),url('assets/cartel-charanga.jpg')}.hero-content{padding:65px 0 78px}h1{font-size:clamp(50px,14vw,76px)}.hero p{font-size:13px}.hero-proof{gap:13px;margin-top:30px;font-size:9px}.hero-proof b{font-size:14px}section{padding:66px 0}.about-grid{gap:28px}.stats{gap:8px}.stat strong{font-size:21px}.stat span{font-size:8px}.event-grid{gap:9px}.event-card{padding:20px 15px;min-height:205px}.event-card h3{font-size:11px}.gallery-grid{grid-template-columns:1fr;max-width:440px;margin:auto}.sponsor-grid{grid-template-columns:repeat(2,1fr);gap:10px}.sponsor-card{min-height:120px;padding:8px}.sponsor-card img{height:100px}.contact-card{padding:22px}.footer-inner{justify-content:center;text-align:center}.btn{padding:14px 15px;font-size:10px}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav container" aria-label="Navegación principal">
+    <a class="brand" href="#inicio"><img src="assets/logo-los-del-ultimo-cubata.jpg" alt=""><span>LOS DEL ÚLTIMO CUBATA</span></a>
+    <div class="navlinks">
+      <a href="#nosotros">Nosotros</a><a href="#eventos">Eventos</a><a href="#galeria">Galería</a><a href="#patrocinadores">Patrocinadores</a><a class="nav-cta" href="#contacto">Contacto ↗</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="kicker">Charanga · Alameda de la Sagra, Toledo</div>
+        <h1>La música<br>que enciende <span>la fiesta.</span></h1>
+        <p>Somos <strong>Los del Último Cubata</strong>. Ponemos ritmo, energía y buen ambiente en fiestas populares, pasacalles, bodas, eventos privados y mucho más.</p>
+        <div class="btns">
+          <a class="btn" href="https://wa.me/34601648164?text=Hola%2C%20quiero%20informacion%20sobre%20Los%20Del%20Ultimo%20Cubata" target="_blank" rel="noopener">✆ Pedir presupuesto</a>
+          <a class="btn secondary" href="#galeria">Ver nuestros carteles ↓</a>
+        </div>
+        <div class="hero-proof"><span><b>♪</b> Repertorio variado</span><span><b>★</b> Buen ambiente</span><span><b>♫</b> Para todo tipo de eventos</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="marquee"><span>♪ Música en directo</span> ✦ <span>Fiesta</span> ✦ <span>Buen ambiente</span> ✦ <span>Presupuesto sin compromiso</span> ✦ <span>♪ Música en directo</span> ✦</div>
+
+  <section id="nosotros">
+    <div class="container about-grid">
+      <div class="about-copy">
+        <div class="eyebrow">Conócenos</div>
+        <h2>Más que una charanga.<br><span>Somos una fiesta.</span></h2>
+        <p class="lead">Desde Alameda de la Sagra, Toledo, llegamos con ganas de animar las calles y convertir cada celebración en un recuerdo inolvidable. Nos encanta compartir música, conectar con la gente y hacer que nadie se quede quieto.</p>
+        <p class="lead">Contamos con músicos con experiencia en charanga y un repertorio variado para adaptarnos al tipo de evento y al ambiente que buscas. Tú pones la fecha; nosotros ponemos el ritmo.</p>
+        <div class="stats"><div class="stat"><strong>100%</strong><span>Actitud festiva</span></div><div class="stat"><strong>Todo tipo</strong><span>De celebraciones</span></div><div class="stat"><strong>Toledo</strong><span>Y donde nos llamen</span></div></div>
+        <div class="btns"><a class="btn" href="https://wa.me/34601648164?text=Hola%2C%20quiero%20informacion%20sobre%20Los%20Del%20Ultimo%20Cubata" target="_blank" rel="noopener">Cuéntanos tu idea</a></div>
+      </div>
+      <div class="about-image">
+        <img src="assets/cartel-charanga.jpg" alt="Cartel promocional de Los del Último Cubata con la charanga y su imagen">
+        <div class="image-label">Música · Fiesta · Buen ambiente</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="events" id="eventos">
+    <div class="container">
+      <div class="section-head center"><div class="eyebrow">Nos apuntamos a tu celebración</div><h2>Amenizamos <span>todos los eventos</span></h2><p class="lead">Cada evento tiene su propio ritmo. Nos adaptamos a la ocasión para llenar el día de música, energía y buenos momentos.</p></div>
+      <div class="event-grid">
+        <article class="event-card"><div class="event-number">01</div><div class="event-icon">🥂</div><h3>Fiestas populares y pasacalles</h3><p>Animación por las calles y ambiente festivo para todos.</p></article>
+        <article class="event-card"><div class="event-number">02</div><div class="event-icon">🎉</div><h3>Eventos privados y peñas</h3><p>La dosis de música que convierte una reunión en fiestón.</p></article>
+        <article class="event-card"><div class="event-number">03</div><div class="event-icon">💍</div><h3>Bodas y comuniones</h3><p>Un toque diferente para acompañar grandes momentos.</p></article>
+        <article class="event-card"><div class="event-number">04</div><div class="event-icon">🎂</div><h3>Cumpleaños, bautizos y más</h3><p>Si hay algo que celebrar, ¡nosotros ponemos la banda sonora!</p></article>
+      </div>
+      <p class="event-note">¿Tienes una idea diferente? <strong>Hablemos y preparamos algo a tu medida.</strong></p>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Nuestra imagen</div><h2>La fiesta se <span>ve y se escucha.</span></h2><p class="lead">Descubre nuestros carteles y comparte nuestra propuesta. ¡Agenda abierta para nuevos eventos!</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-item"><img src="assets/cartel-charanga.jpg" alt="Cartel de Los del Último Cubata para amenizar todo tipo de eventos" loading="lazy"><figcaption>Los del Último Cubata · Todo tipo de eventos</figcaption></figure>
+        <figure class="gallery-item"><img src="assets/cartel-agenda-2027.jpg" alt="Cartel de agenda abierta 2027" loading="lazy"><figcaption>Agenda abierta 2027 · Reserva tu fecha</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container contact-layout">
+      <div><div class="eyebrow">¿Preparamos algo grande?</div><h2>Tu evento.<br><span>Nuestra música.</span></h2><p class="lead">Consúltanos disponibilidad, cuéntanos qué estás organizando y pide presupuesto sin compromiso. ¡Estamos deseando ponerle ritmo!</p><div class="phone">601 648 164</div><p class="lead">Alameda de la Sagra · Toledo</p><a class="btn" href="https://wa.me/34601648164?text=Hola%2C%20quiero%20informacion%20sobre%20Los%20Del%20Ultimo%20Cubata" target="_blank" rel="noopener">✆ Escribir por WhatsApp</a></div>
+      <div class="contact-card"><div class="eyebrow">Síguenos también por aquí</div><h3 style="font:28px Anton,Impact,sans-serif;text-transform:uppercase;margin:12px 0 8px">No te pierdas <span style="color:var(--yellow)">nada</span></h3><p>Noticias, vídeos, próximos eventos y mucho ambiente en nuestras redes sociales.</p>
+        <div class="social-list">
+          <a class="social" href="https://www.instagram.com/charangalosdelultimocubata_/" target="_blank" rel="noopener"><span>◎ &nbsp; Instagram · @charangalosdelultimocubata_</span><span>↗</span></a>
+          <a class="social" href="https://www.tiktok.com/@charangalosdelultimocubata_" target="_blank" rel="noopener"><span>♪ &nbsp; TikTok · @charangalosdelultimocubata_</span><span>↗</span></a>
+          <a class="social" href="https://www.facebook.com/search/top?q=charangalosdelultimocubata%20Alameda%20de%20la%20Sagra" target="_blank" rel="noopener"><span>f &nbsp; Facebook · Los del Último Cubata</span><span>↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sponsors" id="patrocinadores">
+    <div class="container">
+      <div class="section-head center"><div class="eyebrow">Gracias por estar ahí</div><h2>Con el apoyo de <span>nuestros patrocinadores</span></h2><p class="lead">Gracias a las empresas y negocios que apoyan a Los del Último Cubata y hacen posible que la música siga sonando.</p></div>
+      <div class="sponsor-grid">
+        <div class="sponsor-card"><img src="assets/sponsor-tar.jpg" alt="Talleres Alonso Ruano, S.L." loading="lazy"></div>
+        <div class="sponsor-card"><img src="assets/sponsor-baonza.jpg" alt="RB Baonza Excavaciones Alameda, S.L." loading="lazy"></div>
+        <div class="sponsor-card"><img src="assets/sponsor-incal.jpg" alt="Incal Calderas Industriales" loading="lazy"></div>
+        <div class="sponsor-card"><img src="assets/sponsor-lalola.jpg" alt="La Lola" loading="lazy"></div>
+        <div class="sponsor-card"><img src="assets/sponsor-maruxina.jpg" alt="Ca Maruxiña" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> <strong>LOS DEL ÚLTIMO CUBATA</strong></span><span>Alameda de la Sagra · Toledo</span><span>Música · Fiesta · Buen ambiente</span></div></footer>
+<a class="float-wa" aria-label="Escribir por WhatsApp" title="Escribir por WhatsApp" href="https://wa.me/34601648164?text=Hola%2C%20quiero%20informacion%20sobre%20Los%20Del%20Ultimo%20Cubata" target="_blank" rel="noopener">✆</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
